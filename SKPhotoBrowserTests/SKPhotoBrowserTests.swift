@@ -7,7 +7,11 @@
 //
 
 import XCTest
+#if SWIFT_PACKAGE
+@testable import SKPhotoBrowserSDK
+#else
 @testable import SKPhotoBrowser
+#endif
 
 class FakeSKPhotoBrowser: SKPhotoBrowser {
     override func setup () {

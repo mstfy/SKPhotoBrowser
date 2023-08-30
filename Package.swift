@@ -12,12 +12,12 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SKPhotoBrowser",
-            targets: ["SKPhotoBrowser"])
+            name: "SKPhotoBrowserSDK",
+            targets: ["SKPhotoBrowserSDK"])
     ],
     targets: [
         .target(
-            name: "SKPhotoBrowser",
+            name: "SKPhotoBrowserSDK",
             dependencies: ["SKPhotoBrowserObjC"],
             path: "SKPhotoBrowser",
             exclude: ["Info.plist",
@@ -31,7 +31,7 @@ let package = Package(
             publicHeadersPath: "."),
         .testTarget(
             name: "SKPhotoBrowserTests",
-            dependencies: ["SKPhotoBrowser"],
+            dependencies: ["SKPhotoBrowserSDK"],
             path: "SKPhotoBrowserTests",
             exclude: ["Info.plist"]
         )
